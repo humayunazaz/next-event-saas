@@ -6,6 +6,7 @@ export default authMiddleware({
     "/api/webhooks/clerk",
     "/api/webhooks/stripe",
     "/api/uploadthing",
+    "/api/webhooks/clerk/(.*)",
   ],
 });
 export const config = {
