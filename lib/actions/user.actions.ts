@@ -13,8 +13,9 @@ import { CreateUserParams, UpdateUserParams } from "@/types";
 export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase();
-
+    console.log("Creating user");
     const newUser = await User.create(user);
+    console.log("User created");
     return JSON.parse(JSON.stringify(newUser));
   } catch (error) {
     handleError(error);
